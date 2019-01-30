@@ -1,0 +1,12 @@
+intro - objective, purpose - vision,mission,objective
+sofware requirements
+*functionalities- in the analysis with the constraints - assumptions
+*literature survey - similar applications that are implemented - used for reference - citations- comparisons
+*Design - backend design, frontend design, er, schema, normalization, dataflow
+Implementation - code snippets- functions, queries, description of the snippets, trigger(syntax), stored prcedures
+testing - table - test cases- unit testing - front end on whihc it is tested - success/failure
+snapshots of the application 
+conclusion - functionalitites specified in the mission are met/not 
+References -   
+
+<!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"-->

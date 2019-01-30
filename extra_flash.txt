@@ -1,0 +1,73 @@
+@app.route('/Register',methods=['GET','POST'])
+def register():
+	form = Register()
+	if form.validate_on_submit():
+		flash(f'Account created for {form.username.data}!','success')
+		return redirect(url_for('home'))
+	return render_template('register.html',form = form)
+
+
+
+class Booking(FlaskForm):
+	start_city = StringField('Start city',[DataRequired()])
+	destination_city = StringField('Destination city',[DataRequired()])
+	return_journey = BooleanField('Return journey')
+	start_date = 
+	return_date = 
+	seat_num = IntegerField('Number of seats',[DataRequired()])
+	mode = RadioField('Gender',choices=[('rail','Rail'),('road','Road'),('air','Air')])
+	submit = SubmitField('Submit')
+
+			<!--div class="text-muted">
+				Already have an account? <a href={{ url_for('enquiry') }}>Sign In</a>
+			</div-->
+
+
+
+
+			<!--my main.css>
+			body, html {
+  height: 100%;
+  margin: 0;
+  font-family: `Rouge Script`,cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+.img1 { background-image: url('Rajasthan.jpg'); background-position: right }
+.img2 { background-image: url('Ladakh.jpg'); }
+.img3 { background-image: url('Karnataka.jpg'); }
+.img4 { background-image: url('Kerala.jpg'); }
+.img5 { background-image: url('Agra.jpg'); background-position: left top; }
+.img6 { background-image: url('Gujarat.jpg'); }
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4);/* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+  border: 10px solid #f1f1f1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 600px;
+  padding: 10px;
+  text-align: center;
+}
