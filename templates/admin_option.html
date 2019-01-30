@@ -1,0 +1,7 @@
+{% extends "layout1.html" %}
+{% block content %}
+<div>
+	<a class="btn btn-success btn-lg" href="{{ url_for('stats') }}">Site statistics</a><br><br>
+	<a class="btn btn-success btn-lg" href="{{ url_for('admin_addPack') }}">Add new package</a>
+</div>
+{% endblock content %}

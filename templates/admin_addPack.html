@@ -1,0 +1,55 @@
+{% extends "layout1.html"%}
+{% block content %}
+	<div class="content-section">
+		<form action="" method="POST">
+			{{ form.hidden_tag()}}
+			<fieldset class="form-group">
+				<legend class="border-bottom content-title">Add package</legend>
+					<div class="form-group">
+						{{ form.comp_name.label }}
+						{{ form.comp_name(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.comp_email.label }}
+						{{ form.comp_email(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.phone.label }}
+						{{ form.phone(class="form-control") }}
+					</div>
+					<legend class="border-bottom content-title">Package details</legend>
+					<div class="form-group">
+						{{ form.start_loc.label }}
+						{{ form.start_loc(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.dest_loc.label }}
+						{{ form.dest_loc(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.start_date.label }}
+						{{ form.start_date(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.end_date.label }}
+						{{ form.end_date(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.mode.label }}
+						{{ form.mode(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.seat_num.label }}
+						{{ form.seat_num(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.price.label }}
+						{{ form.price(class="form-control") }}
+					</div>
+			</fieldset>
+			<div class="form-group">
+				{{ form.submit(class="btn btn-info") }}
+			</div>
+		</form>
+	</div>		
+{% endblock content%}

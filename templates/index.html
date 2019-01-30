@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<style>
+			body {
+		background-color: #000;
+		background-image: url("/static/images/bg.jpg");
+		/*background-image: url("{{ url_for('static', filename='images/bg.jpg') }}");*/
+		background-size: cover;
+		background-position: top center;
+	}</style>
+		<title>Wanderlust- Travels and Tours</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" href="{{ url_for('static', filename='images/W.jpg')}}" type="image/jpg" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css' )}}"/>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}"/>
+	</head>
+<body>
+	<header class="site-header">
+	  <!--creates a navigation bar fixed at the top of the page -->
+	  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+
+	  	<!-- creates a sub-nav bar starting at the website icon -->
+	  	<div class="container">
+	      <!-- website name-->
+	      <a class="navbar-brand mr-4" href="/index">Wanderlust</a>
+
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+	      
+	      <div class="collapse navbar-collapse" id="navbarToggle">
+	        <div class="navbar-nav mr-auto">
+	          <a class="nav-item nav-link" href="/index">Home</a>
+	          <a class="nav-item nav-link" href="/about">About us</a>
+	          <a class="nav-item nav-link" href="#footer">Contact Us</a>
+
+	          <a class="nav-item nav-link" href="/destination">Destination</a>
+	          <a class="nav-item nav-link" href="/packages">Packages</a>
+	        </div>
+	        <!-- Navbar Right Side -->
+	        <div class="navbar-nav">
+	          <a class="nav-item nav-link" href="/enquiry">Enquiry</a>
+	          <a class="nav-item nav-link" href="/review">Feedback</a>
+	          <a class="nav-item nav-link" href="/register">Book</a>
+	          <a class="nav-item nav-link" href="/admin_login">Admin</a>
+	        </div>
+	      </div>
+	  </nav>
+	</div>
+	</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" >
+						<span class="avatar"><img src="{{url_for('static',filename='images/home.jpg')}}" alt="" /></span>
+						<h1><strong>Online Tours and Travels</strong> <br />
+							A Destination for the new Millenium </h1>
+						
+					</header>
+				<!--<div class="button" >
+					<button a href="#footer" id="bott">Contact Us</button>
+				</div>-->
+				<!--<div class="button">
+					<a href="#footer" class="button">Contact us</a>
+				
+			</div>
+				</div>
+				<!-- Main -->
+					<section id="main">
+
+						<!-- Thumbnails -->
+							<section class="thumbnails">
+								<div>
+									<a href="{{url_for('mumbai')}}">
+										<img src="{{url_for('static',filename='images/fulls/mumbai.jpg')}}" alt="" />
+										<h3><strong>MUMBAI</strong> </h3>
+									</a>
+									<a href="{{url_for('kerala')}}">
+										<img src="{{url_for('static',filename='images/fulls/kerala2.jpg')}}" alt="" />
+										<h3><strong>KERALA</strong> </h3>
+									</a>
+								</div>
+								<div>
+									<a href="{{url_for('ladakh')}}">
+										<img src="{{url_for('static',filename='images/fulls/ladakh.jpeg')}}" alt="" />
+										<h3><strong>LADAKH</strong> </h3>
+									</a>
+									<a href="{{url_for('kasol')}}">
+										<img src="{{url_for('static',filename='images/fulls/kasol.jpg')}}" alt="" />
+										<h3><strong>KASOL</strong> </h3>
+									</a>
+									<a href="{{url_for('karnataka')}}">
+										<img src="{{url_for('static',filename='Karnataka.jpg')}}" alt="" />
+										<h3><strong>KARNATAKA</strong> </h3>
+									</a>
+								</div>
+								<div>
+									
+									<a href="{{url_for('goa')}}">
+										<img src="{{url_for('static',filename='images/fulls/goa.jpg')}}" alt="" />
+										<h3><strong>GOA</strong> </h3>
+									</a>
+									<a href="{{url_for('rajasthan')}}">
+										<img src="{{url_for('static',filename='Rajasthan.jpg')}}" alt="" />
+										<h3><strong>RAJASTHAN</strong> </h3>
+									</a>
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p><strong>Contact us : +91 9741450217 <br/>
+							+91 9591224529<br/>
+						sanjkrao@gmail.com <br/>
+					shraddha.jain3219@gmail.com</strong></p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/jquery.min.js"></script>
+			<script src="/static/jquery.poptrox.min.js"></script>
+			<script src="/static/skel.min.js"></script>
+			<script src="/static/main.js"></script>
+			<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	</body>
+</html>

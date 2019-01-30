@@ -1,0 +1,32 @@
+{% extends "layout1.html"%}
+{% block content %}
+	<div class="content-section">
+		<form action="" method="POST">
+			{{ form.hidden_tag()}}
+			<fieldset class="form-group">
+				<legend class="border-bottom content-title">Enquiry</legend>
+					<div class="form-group">
+						{{ form.email.label }}
+						{{ form.email(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.password.label }}
+						{{ form.password(class="form-control") }}
+					</div>
+					<div class="form-check">
+						{{ form.remember(class="form-check-input") }}
+						{{ form.remember.label(class="form-check-label") }}
+					</div>
+			</fieldset>
+			<div class="form-group">
+				{{ form.login(class="btn btn-info") }}
+			</div>
+			<!--small>
+				<a href="#">Forgot password? </a>
+			</small-->
+		</form>
+	</div>		
+	<div style="color:#000000">
+		Want to book a new package? <a href="{{ url_for('register')}}">Book now!</a>
+	</div>
+{% endblock content%}

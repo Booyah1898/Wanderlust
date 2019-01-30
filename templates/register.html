@@ -1,0 +1,43 @@
+{% extends "layout1.html"%}
+{% block content %}
+	<div class="content-section">
+		<form action="" method="POST">
+			{{ form.hidden_tag()}}
+			<fieldset class="form-group">
+				<legend class="border-bottom content-title">Book a package today!</legend>
+					<div class="form-group">
+						{{ form.name.label }}
+						{{ form.name(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.email.label }}
+						{{ form.email(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.phone.label }}
+						{{ form.phone(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.packageID.label }}
+						{{ form.packageID(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.seat_num.label }}
+						{{ form.seat_num(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.password.label }}
+						{{ form.password(class="form-control") }}
+					</div>
+					<div class="form-group">
+						{{ form.confirm_pass.label }}
+						{{ form.confirm_pass(class="form-control") }}
+					</div>
+			</fieldset>
+			<div class="form-group">
+				{{ form.submit(class="btn btn-outline-info") }}
+			</div>
+
+		</form>
+	</div>
+{% endblock content%}
